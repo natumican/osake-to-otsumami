@@ -1,0 +1,13 @@
+<div class="main posts-index">
+  <div class="container">
+    <% @posts.each do |post|%>
+      <div class="posts-index-item">
+          <%= link_to(post.content, "/posts/#{post.id}") %><br>
+      </div>
+      <div class="post-time">
+       <%= post.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+      </dvv>
+      <hr>
+    <% end%>
+  </div>
+</div>
